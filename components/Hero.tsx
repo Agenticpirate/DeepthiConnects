@@ -54,12 +54,12 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative w-full bg-neo-white border-b-4 border-black overflow-hidden flex flex-col bg-pro-grid min-h-[auto] lg:min-h-[800px] lg:h-[calc(100vh-5.5rem)]">
+    <section id="home" className="relative w-full bg-neo-white border-b-4 border-black overflow-hidden flex flex-col bg-pro-grid min-h-[auto] lg:min-h-[850px]">
 
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 flex-grow w-full relative">
         
         {/* LEFT CONTENT COLUMN */}
-        <div className="px-3 sm:px-6 lg:px-12 py-3 sm:py-8 lg:py-0 flex flex-col justify-center border-r-0 lg:border-r-4 border-black relative z-20">
+        <div className="px-3 sm:px-6 lg:px-12 py-3 sm:py-8 lg:py-12 flex flex-col justify-center border-r-0 lg:border-r-4 border-black relative z-20">
           
           {/* Mobile: Content + Profile side by side */}
           <div className="flex gap-2 lg:gap-0 lg:block items-start">
