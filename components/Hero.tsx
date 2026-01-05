@@ -54,12 +54,12 @@ const Hero: React.FC = () => {
   ];
 
   return (
-    <section id="home" className="relative w-full bg-neo-white border-b-4 border-black overflow-hidden flex flex-col bg-pro-grid min-h-[auto] lg:min-h-[850px]">
+    <section id="home" className="relative w-full bg-neo-white border-b-4 border-black overflow-visible flex flex-col bg-pro-grid">
 
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 flex-grow w-full relative">
         
         {/* LEFT CONTENT COLUMN */}
-        <div className="px-3 sm:px-6 lg:px-12 py-3 sm:py-8 lg:py-12 flex flex-col justify-center border-r-0 lg:border-r-4 border-black relative z-20">
+        <div className="px-4 sm:px-6 lg:px-12 py-6 sm:py-8 lg:py-10 flex flex-col justify-center border-r-0 lg:border-r-4 border-black relative z-20">
           
           {/* Mobile: Content + Profile side by side */}
           <div className="flex gap-2 lg:gap-0 lg:block items-start">
@@ -84,14 +84,14 @@ const Hero: React.FC = () => {
               </Reveal>
 
               <Reveal delay={100}>
-                <h1 className="text-[22px] sm:text-5xl lg:text-7xl xl:text-8xl font-black leading-[0.95] mb-2 sm:mb-8 text-black tracking-tighter uppercase">
+                <h1 className="text-[22px] sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[0.95] mb-2 sm:mb-6 text-black tracking-tighter uppercase">
                   <span className="block">HIRE SMARTER.</span>
                   <span className="block"><span className="bg-neo-yellow px-1 sm:px-3 py-0.5 sm:py-1 inline-block -rotate-2">GET HIRED</span> FASTER.</span>
                 </h1>
               </Reveal>
 
               <Reveal delay={200}>
-                <p className="text-[9px] sm:text-lg md:text-xl font-bold text-gray-800 mb-2 sm:mb-10 max-w-xl leading-snug border-l-2 sm:border-l-8 border-black pl-2 sm:pl-6">
+                <p className="text-[9px] sm:text-base md:text-lg font-bold text-gray-800 mb-2 sm:mb-6 max-w-xl leading-snug border-l-2 sm:border-l-8 border-black pl-2 sm:pl-6">
                   Strategic HR, recruitment, and resume solutions that deliver results. <span className="text-neo-purple font-black">Let's build your success story together.</span>
                 </p>
               </Reveal>
@@ -143,33 +143,33 @@ const Hero: React.FC = () => {
           </div>
 
           <Reveal delay={300}>
-            <div className="flex flex-row gap-2 sm:gap-5 mb-3 sm:mb-14">
+            <div className="flex flex-row gap-2 sm:gap-4 mb-4 sm:mb-8">
               <a 
                 href="#contact" 
                 onClick={(e) => handleScrollToSection(e, '#contact')}
-                className="group relative inline-flex items-center justify-center px-2 sm:px-10 py-1.5 sm:py-5 bg-neo-purple text-white border-2 sm:border-4 border-black font-black text-[8px] sm:text-base uppercase tracking-tight transition-all shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1"
+                className="group relative inline-flex items-center justify-center px-2 sm:px-8 py-1.5 sm:py-4 bg-neo-purple text-white border-2 sm:border-4 border-black font-black text-[8px] sm:text-sm uppercase tracking-tight transition-all shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1"
               >
                 Upgrade Resume <ArrowRight className="w-2.5 h-2.5 sm:w-5 sm:h-5 ml-1 sm:ml-3 group-hover:translate-x-2 transition-transform" />
               </a>
               <a 
                 href="#services" 
                 onClick={(e) => handleScrollToSection(e, '#services')}
-                className="group relative inline-flex items-center justify-center px-2 sm:px-10 py-1.5 sm:py-5 bg-white text-black border-2 sm:border-4 border-black font-black text-[8px] sm:text-base uppercase tracking-tight transition-all shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-neo-yellow"
+                className="group relative inline-flex items-center justify-center px-2 sm:px-8 py-1.5 sm:py-4 bg-white text-black border-2 sm:border-4 border-black font-black text-[8px] sm:text-sm uppercase tracking-tight transition-all shadow-neo hover:shadow-none hover:translate-x-1 hover:translate-y-1 hover:bg-neo-yellow"
               >
                 Hire Talent
               </a>
             </div>
 
             {/* Micro Stats Row */}
-            <div className="flex flex-wrap gap-2 sm:gap-8">
+            <div className="flex flex-wrap gap-2 sm:gap-6">
               {trustBadges.map((badge, i) => (
-                <div key={i} className="flex items-center gap-1 sm:gap-4 group cursor-default">
-                  <div className={`w-7 h-7 sm:w-12 sm:h-12 ${badge.color} border-2 sm:border-4 border-black flex items-center justify-center shadow-neo-sm group-hover:rotate-6 transition-transform`}>
+                <div key={i} className="flex items-center gap-1 sm:gap-3 group cursor-default">
+                  <div className={`w-7 h-7 sm:w-10 sm:h-10 ${badge.color} border-2 sm:border-3 border-black flex items-center justify-center shadow-neo-sm group-hover:rotate-6 transition-transform`}>
                     {badge.icon}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm sm:text-2xl font-black leading-none">{badge.count}</span>
-                    <span className="text-[6px] sm:text-[10px] font-black text-gray-500 uppercase tracking-wide sm:tracking-widest">{badge.label}</span>
+                    <span className="text-sm sm:text-xl font-black leading-none">{badge.count}</span>
+                    <span className="text-[6px] sm:text-[9px] font-black text-gray-500 uppercase tracking-wide sm:tracking-widest">{badge.label}</span>
                   </div>
                 </div>
               ))}
