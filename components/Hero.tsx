@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Linkedin, FileText, Rocket, Mail, Award, Users, Briefcase, ChevronDown } from 'lucide-react';
+import { ArrowRight, Linkedin, FileText, Rocket, Mail, Award, Users, Briefcase } from 'lucide-react';
 import { Reveal } from './Reveal';
 
 const Hero: React.FC = () => {
@@ -55,14 +55,6 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative w-full bg-neo-white border-b-4 border-black overflow-hidden flex flex-col bg-pro-grid min-h-[auto] lg:min-h-[800px] lg:h-[calc(100vh-5.5rem)]">
-      
-      {/* Header Progress Strip - Desktop only */}
-      <div className="absolute top-0 left-0 w-full h-2 z-40 bg-gray-200 border-b-2 border-black hidden lg:block">
-        <div 
-          className="h-full bg-neo-purple border-r-2 border-black transition-all duration-150 ease-out"
-          style={{ width: `${Math.min((scrollY / 600) * 100, 100)}%` }}
-        ></div>
-      </div>
 
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 flex-grow w-full relative">
         
@@ -168,8 +160,8 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Micro Stats Row */}
-            <div className="flex flex-wrap gap-2 sm:gap-8">
+            {/* Micro Stats Row - Desktop only */}
+            <div className="hidden lg:flex flex-wrap gap-2 sm:gap-8">
               {trustBadges.map((badge, i) => (
                 <div key={i} className="flex items-center gap-1 sm:gap-4 group cursor-default">
                   <div className={`w-7 h-7 sm:w-12 sm:h-12 ${badge.color} border-2 sm:border-4 border-black flex items-center justify-center shadow-neo-sm group-hover:rotate-6 transition-transform`}>
@@ -184,35 +176,6 @@ const Hero: React.FC = () => {
             </div>
           </Reveal>
 
-          {/* SCROLL PILLAR - Desktop only */}
-          <div 
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 hidden lg:flex flex-col items-center z-50 transition-opacity duration-500"
-            style={{ opacity: Math.max(0, 1 - scrollY / 300) }}
-          >
-            <div 
-              className="flex flex-col items-center gap-3 bg-white border-4 border-black p-4 shadow-neo cursor-pointer hover:shadow-none hover:translate-y-1 transition-all duration-300"
-              onClick={(e) => handleScrollToSection(e as any, '#about')}
-            >
-              <span className="vertical-text text-[9px] font-black uppercase tracking-[0.3em] rotate-180 whitespace-nowrap text-black">
-                SCROLL TO EXPLORE
-              </span>
-              
-              <div className="w-2 h-24 bg-gray-200 border-2 border-black relative overflow-hidden rounded-full">
-                <div 
-                  className="absolute top-0 left-0 w-full bg-gradient-to-b from-neo-purple to-neo-pink transition-all duration-100 ease-out"
-                  style={{ height: `${Math.min((scrollY / 400) * 100, 100)}%` }}
-                ></div>
-                <div 
-                  className="absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-neo-purple border-2 border-black rounded-full shadow-sm animate-scroll-bounce"
-                  style={{ top: `${Math.min((scrollY / 400) * 100, 85)}%` }}
-                ></div>
-              </div>
-              
-              <div className="relative">
-                <ChevronDown className="w-5 h-5 text-black animate-bounce" />
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* RIGHT VISUAL COLUMN - Desktop only */}
@@ -296,15 +259,6 @@ const Hero: React.FC = () => {
         .vertical-text {
           writing-mode: vertical-rl;
           text-orientation: mixed;
-        }
-        
-        @keyframes scroll-bounce {
-          0%, 100% { transform: translateX(-50%) translateY(0); }
-          50% { transform: translateX(-50%) translateY(8px); }
-        }
-        
-        .animate-scroll-bounce {
-          animation: scroll-bounce 1.5s ease-in-out infinite;
         }
       `}</style>
     </section>
