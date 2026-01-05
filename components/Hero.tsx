@@ -160,8 +160,8 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            {/* Micro Stats Row - Desktop only */}
-            <div className="hidden lg:flex flex-wrap gap-2 sm:gap-8">
+            {/* Micro Stats Row */}
+            <div className="flex flex-wrap gap-2 sm:gap-8">
               {trustBadges.map((badge, i) => (
                 <div key={i} className="flex items-center gap-1 sm:gap-4 group cursor-default">
                   <div className={`w-7 h-7 sm:w-12 sm:h-12 ${badge.color} border-2 sm:border-4 border-black flex items-center justify-center shadow-neo-sm group-hover:rotate-6 transition-transform`}>
